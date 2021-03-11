@@ -253,6 +253,18 @@ async function getAllPosts() {
   }
 }
 
+async function getAllTags() {
+  try {
+    const { rows: tags } = await client.query(`
+      SELECT * from tags;
+    `);
+
+    return tags;
+  } catch (error) {
+    throw error;
+  }
+}
+
 async function updatePost(postId, fields = {}) {
   // read off the tags & remove that field
   const { tags } = fields; // might be undefined
@@ -325,8 +337,24 @@ async function getPostsByTagName(tagName) {
   }
 }
 
+async function getUserByUsername(username) {
+  try {
+    const { rows: [user] } = await client.query(`
+      SELECT *
+      FROM users
+      WHERE username=$1;
+    `, [username]);
+
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   client,
+  getAllTags,
+  getUserByUsername,
   createUser,
   updateUser,
   getAllUsers,

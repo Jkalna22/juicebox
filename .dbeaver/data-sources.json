@@ -1,7 +1,7 @@
 {
 	"folders": {},
 	"connections": {
-		"postgres-jdbc-177ff8a6373-50cdae664ec05e15": {
+		"postgres-jdbc-17818340bb0-19bd6decf376fb8a": {
 			"provider": "postgresql",
 			"driver": "postgres-jdbc",
 			"name": "postgres",
@@ -18,6 +18,56 @@
 					"connectTimeout": "20",
 					"loginTimeout": "20"
 				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		},
+		"postgres-jdbc-1781837ee99-1c53e8324ae17b0": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres 2",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"home": "postgresql_client",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		},
+		"postgres-jdbc-17818522466-37e9f01aa2ab82b0": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "myTest",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "myTest",
+				"url": "jdbc:postgresql://localhost:5432/myTest",
+				"home": "postgresql_client",
+				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-show-non-default-db@": "false",
 					"@dbeaver-show-template-db@": "false",
