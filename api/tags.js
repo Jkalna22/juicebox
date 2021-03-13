@@ -12,7 +12,6 @@ const { getAllTags, getPostsByTagName } = require('../db');
 tagsRouter.get('/:tagName/posts', async (req, res, next) => {
   // read the tagname from the params
   const tagname = req.params;
-  console.log(tagname);
 
   try {
     const posts = getPostsByTagName(tagname);
